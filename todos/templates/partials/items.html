@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+ <div hx-get="{% url 'items' %}" hx-trigger="every 2s">
+{% for todo in todos %}
+
+{% include "partials/details.html" %}
+
+{% endfor %}
+</div>
+
+{% endblock %}
